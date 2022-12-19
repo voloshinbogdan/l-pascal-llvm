@@ -1,7 +1,7 @@
 CC=clang++
 CFLAGS=-r -std=c++2a -Wall
 LDFLAGS=
-SOURCES=main.cpp
+SOURCES=main.cpp lexer.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=paslang
 
@@ -14,4 +14,4 @@ $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	rm -rf *.o paslang
+	rm -rf *.o $(EXECUTABLE)
